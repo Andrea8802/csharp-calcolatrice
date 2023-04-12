@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace csharp_calcolatrice
 {
-    internal class CalcoliHelper
+    public static class CalcoliHelper
     {
-        private CalcoliHelper()
-        {
-            // Il costruttore privato per evitare la creazione dell'istanza
-        }
 
         public static int SommaNum(int num1, int num2)
         {
@@ -54,31 +50,63 @@ namespace csharp_calcolatrice
 
         public static int MinNum(int num1, int num2)
         {
-            return Math.Min(num1, num2);
+            if (num1 < num2)
+                return num1;
+            else
+                return num2;
         }
 
         public static double MinNum(double num1, double num2)
         {
-            return Math.Min(num1, num2);
+            if (num1 < num2)
+                return num1;
+            else
+                return num2;
         }
 
         public static int MaxNum(int num1, int num2)
         {
-            return Math.Max(num1, num2);
+            if (num1 > num2)
+                return num1;
+            else
+                return num2;
         }
 
         public static double MaxNum(double num1, double num2)
         {
-            return Math.Max(num1, num2);
+            if (num1 > num2)
+                return num1;
+            else
+                return num2;
         }
 
         public static int Eleva(int numBase, int esponente)
         {
+            if (numBase == 0 && esponente == 0)
+            {
+                return 1;
+            }
+            else if (esponente == 0)
+            {
+                // caso esponente = 0, qualsiasi sia il valore della base il risultato è 1
+                return 1;
+            }
+            else if (esponente < 0)
+            {
+                // caso esponente negativo, calcoliamo la potenza dell'inverso della base
+                return Eleva(1 / numBase, -esponente);
+            }
+            else
+            {
+                // caso generale, calcoliamo la potenza con un ciclo for
+                int result = 1;
+                for (int i = 0; i < esponente; i++)
+                {
+                    result *= numBase;
+                }
+                return result;
+            }
 
-            double risultato = 1;
-            if(numBase > 0 && esponente > 0) risultato = Math.Pow((double)numBase, (double)esponente);
-            
-            return (int)risultato;
         }
     }
 }
