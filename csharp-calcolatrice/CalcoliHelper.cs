@@ -80,26 +80,21 @@ namespace csharp_calcolatrice
                 return num2;
         }
 
-        public static int Eleva(int numBase, int esponente)
+        public static double Eleva(int numBase, int esponente)
         {
             if (numBase == 0 && esponente == 0)
                 return 1;
 
-            else if (esponente == 0)
-                return 1;
+            double risultato = 1;
+            double numBase2 = (double)numBase;
 
-            else if (esponente < 0)
-                return Eleva(1 / numBase, -esponente);
+            if (esponente < 0)
+                numBase2 = 1.0 / numBase2;
 
-            else
-            {
-                int result = 1;
-                for (int i = 0; i < esponente; i++)
-                {
-                    result *= numBase;
-                }
-                return result;
-            }
+                for (int i = 0; i < Math.Abs(esponente); i++)
+                    risultato *= numBase2;
+
+                return risultato;
 
         }
     }
