@@ -75,16 +75,10 @@ namespace csharp_calcolatrice
         public static int Eleva(int numBase, int esponente)
         {
 
-            int risultato = 1;
-            if(numBase > 0 && esponente > 0)
-            {
-                for (int i = 1; i <= esponente; i++)
-                {
-                    risultato += numBase * numBase;
-                }
-            }
+            double risultato = 1;
+            if(numBase > 0 && esponente > 0) risultato = Math.Pow((double)numBase, (double)esponente);
             
-            return risultato;
+            return (int)risultato;
         }
     }
 }
