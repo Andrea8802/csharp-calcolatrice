@@ -4,25 +4,20 @@
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("1)" + CalcoliHelper.SommaNum(2, 2));
-            Console.WriteLine("2)" + CalcoliHelper.SommaNum(2.5, 3.7));
-
-            Console.WriteLine("3)" + CalcoliHelper.DifferenzaNum(2, 2));
-            Console.WriteLine("4)" + CalcoliHelper.DifferenzaNum(2.5, 3.7));
-
-            Console.WriteLine("5)" + CalcoliHelper.ProdottoNum(2, 2));
-            Console.WriteLine("6)" + CalcoliHelper.ProdottoNum(2.5, 3.7));
-
-            Console.WriteLine("7)" + CalcoliHelper.ValAbsNum(-2));
-            Console.WriteLine("8)" + CalcoliHelper.ValAbsNum(-2.5));
-
-            Console.WriteLine("9)" + CalcoliHelper.MinNum(2,4));
-            Console.WriteLine("10)" + CalcoliHelper.MinNum(2.5, 3.7));
-
-            Console.WriteLine("11)" + CalcoliHelper.MaxNum(2, 4));
-            Console.WriteLine("12)" + CalcoliHelper.MaxNum(2.5, 3.7));
-
+            Console.WriteLine($"Somma di due numeri interi: {CalcoliHelper.SommaNum(2, 2)} \n \n" +
+                $"Somma di due numeri decimali: {CalcoliHelper.SommaNum(2.5, 3.7)} \n \n" +
+                $"Differenza fra due numeri interi: {CalcoliHelper.DifferenzaNum(2, 2)} \n \n" +
+                $"Differenza fra due numeri decimali: {CalcoliHelper.DifferenzaNum(2.5, 3.7)} \n \n" +
+                $"Prodotto fra due numeri interi: {CalcoliHelper.ProdottoNum(2, 2)} \n \n" +
+                $"Prodotto fra due numeri decimali: {CalcoliHelper.ProdottoNum(2.5, 3.7)} \n \n" +
+                $"Valore assoluto di un numero interi: {CalcoliHelper.ValAbsNum(-2)} \n \n" +
+                $"Valore assoluto di un numero decimale: {CalcoliHelper.ValAbsNum(-2.5)} \n \n" +
+                $"Valore minimo fra due numeri interi: {CalcoliHelper.MinNum(2, 4)} \n \n" +
+                $"Valore minimo fra due numeri decimali: {CalcoliHelper.MinNum(2.5, 3.7)} \n \n" +
+                $"Valore massimo fra due numeri interi: {CalcoliHelper.MaxNum(2, 4)} \n \n" +
+                $"Valore massimo fra due numeri decimali: {CalcoliHelper.MaxNum(2.5, 3.7)} \n \n" +
+                $"Potenza di un numero intero positivo: {CalcoliHelper.Eleva(2, 2)} \n \n" +
+                $"Potenza di un numero intero negativo: {CalcoliHelper.Eleva(-2, -2)}");
 
         }
     }

@@ -71,5 +71,20 @@ namespace csharp_calcolatrice
         {
             return Math.Max(num1, num2);
         }
+
+        public static int Eleva(int numBase, int esponente)
+        {
+
+            int risultato = 1;
+            if(numBase > 0 && esponente > 0)
+            {
+                for (int i = 1; i <= esponente; i++)
+                {
+                    risultato += numBase * numBase;
+                }
+            }
+            
+            return risultato;
+        }
     }
 }
