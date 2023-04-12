@@ -83,22 +83,16 @@ namespace csharp_calcolatrice
         public static int Eleva(int numBase, int esponente)
         {
             if (numBase == 0 && esponente == 0)
-            {
                 return 1;
-            }
+
             else if (esponente == 0)
-            {
-                // caso esponente = 0, qualsiasi sia il valore della base il risultato è 1
                 return 1;
-            }
+
             else if (esponente < 0)
-            {
-                // caso esponente negativo, calcoliamo la potenza dell'inverso della base
                 return Eleva(1 / numBase, -esponente);
-            }
+
             else
             {
-                // caso generale, calcoliamo la potenza con un ciclo for
                 int result = 1;
                 for (int i = 0; i < esponente; i++)
                 {
